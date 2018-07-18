@@ -8,10 +8,16 @@ class ClickityClick extends Component {
     this.state= {
       hasBeenClicked: false,
     };
+
   }
 
   handleClick = () => {
-    this.setState( {hasBeenClicked: true})
+    this.setState( {
+      hasBeenClicked: true
+    },
+    () => console.log("1st", this.state.hasBeenClicked)
+  )
+    console.log("2nd",this.state.hasBeenClicked)
   }
 
   render() {
